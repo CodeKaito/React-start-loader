@@ -1,0 +1,54 @@
+.App-header {
+  background-color: #282C34;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #282C34;
+}
+
+html, body { 
+  height: 100%; 
+}
+
+@keyframes spin {
+  100% {
+      rotate: 360deg;
+  }
+}
+
+svg {
+  width: 10vw;
+  height: 10vw;
+  animation: 
+      spin 1s linear infinite;
+}
+
+@keyframes dash {
+  0%{
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+  }
+  50%{
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+  }
+  100%{
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+  }
+}
+
+circle {
+  fill: none;
+  stroke: #167dc6;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  animation: dash 2.5s ease-in-out infinite;
+}
+
+h1 {
+  color: white;
+}
